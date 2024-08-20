@@ -1,25 +1,22 @@
 "use client";
 import { Box, Grid, Typography, Button, TextField, MenuItem } from '@mui/material';
-import Image from 'next/image';
-import backgroundImage from '@/public/image/filter/bg-img.jpeg'; // Replace with the actual image
-
+import backgroundImage from '@/public/image/hero-section/bg-img.jpeg'; 
 const services = [
   { label: 'Car Wash', value: 'car_wash' },
   { label: 'Interior Cleaning', value: 'interior_cleaning' },
   { label: 'Full Service', value: 'full_service' },
 ];
 
-function Filter() {
+function HeroSection() {
     return (
       <Box
         sx={{
           position: 'relative',
           width: '100%',
           overflow: 'hidden',
-           // Adjust height based on screen size
+          
         }}
       >
-        {/* Background Image */}
         <Box
           sx={{
             position: 'absolute',
@@ -34,14 +31,12 @@ function Filter() {
             zIndex: -1,
           }}
         />
-  
-        {/* Content */}
         <Box
           sx={{
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
-            minHeight: '100%', // Ensure content is vertically centered
+            minHeight: '100%', 
             padding: { xs: '20px', md: '40px' },
           }}
         >
@@ -51,7 +46,7 @@ function Filter() {
             sx={{
               width: '100%',
               maxWidth: '1100px',
-              padding: { xs: '20px', md: '40px' }, // Responsive padding
+              padding: { xs: '20px', md: '40px' }, 
             }}
             justifyContent="center"
           >
@@ -61,8 +56,8 @@ function Filter() {
                 sx={{ 
                   color: '#fff', 
                   textAlign: 'center', 
-                  fontWeight: 'bold', 
-                  fontSize: { xs: '1.5rem', md: '2rem' } // Responsive font size
+                  fontWeight: '500', 
+                  fontSize: { xs: '1.5rem', md: '41px' }
                 }}
               >
                 Convenient and hassle-free car cleaning at your doorstep.
@@ -75,7 +70,8 @@ function Filter() {
                 sx={{ 
                   color: '#fff', 
                   textAlign: 'center',
-                  fontSize: { xs: '1rem', md: '1.25rem' } // Responsive font size
+                  fontWeight: '300',
+                  fontSize: { xs: '1rem', md: '24px' } 
                 }}
               >
                 No time for cleaning your car? Let our platform connect you with local mobile cleaners.
@@ -88,7 +84,7 @@ function Filter() {
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  flexDirection: { xs: 'column', sm: 'row' }, // Stack form on smaller screens
+                  flexDirection: { xs: 'column', sm: 'row' }, 
                   backgroundColor: '#fff',
                   borderRadius: '30px',
                   padding: '5px',
@@ -100,10 +96,16 @@ function Filter() {
                   variant="outlined"
                   sx={{
                     flex: 1,
-                    marginRight: { xs: 0, sm: 2 }, // Adjust margin for smaller screens
+                    marginRight: { xs: 0, sm: 2 }, 
                     marginBottom: { xs: 2, sm: 0 },
                     '& .MuiOutlinedInput-root': {
-                      borderRadius: '30px',
+                      borderRadius: '0',
+                      '& fieldset': {
+                        borderTop: 'none',
+                        borderLeft: 'none',
+                        borderBottom: 'none',
+                      },
+                     
                     },
                   }}
                 />
@@ -112,10 +114,16 @@ function Filter() {
                   variant="outlined"
                   sx={{
                     flex: 1,
-                    marginRight: { xs: 0, sm: 2 }, // Adjust margin for smaller screens
+                    marginRight: { xs: 0, sm: 2 }, 
                     marginBottom: { xs: 2, sm: 0 },
                     '& .MuiOutlinedInput-root': {
-                      borderRadius: '30px',
+                      borderRadius: '0',
+                      '& fieldset': {
+                        borderTop: 'none',
+                        borderLeft: 'none',
+                        borderBottom: 'none',
+                      },
+                     
                     },
                   }}
                 />
@@ -126,10 +134,14 @@ function Filter() {
                   variant="outlined"
                   sx={{
                     flex: 1,
-                    marginRight: { xs: 0, sm: 2 }, // Adjust margin for smaller screens
+                    marginRight: { xs: 0, sm: 2 }, 
                     marginBottom: { xs: 2, sm: 0 },
                     '& .MuiOutlinedInput-root': {
-                      borderRadius: '30px',
+                      borderRadius: '0',
+                      '& fieldset': {
+                        border: 'none',
+                      },
+                     
                     },
                   }}
                 >
@@ -141,11 +153,17 @@ function Filter() {
                 </TextField>
                 <Button
                   variant="contained"
-                  color="primary"
                   sx={{ 
                     borderRadius: '30px', 
                     padding: '10px 30px',
-                    width: { xs: '100%', sm: 'auto' }, // Full width on smaller screens
+                    width: { xs: '100%', sm: 'auto' }, 
+                    backgroundColor: '#3D86BF',
+                    fontSize: { xs: '1rem', md: '1.10rem' },
+                    fontWeight: '500',
+                    //hover none
+                    '&:hover': {
+                      backgroundColor: '#3D86BF',
+                    },
                   }}
                 >
                   Book
@@ -164,4 +182,4 @@ function Filter() {
     );
   }
   
-  export default Filter;
+  export default HeroSection;
