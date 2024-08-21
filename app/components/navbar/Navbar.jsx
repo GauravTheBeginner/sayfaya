@@ -29,7 +29,7 @@ const StyledLink = styled(Link)(({ theme }) => ({
 }));
 export default function Navbar() {
     return (
-        <Box sx={{  display: "flex", flexDirection: "column", gap: 1, paddingX: "1%", paddingY: "1%",justifyContent:"center",alignItems:"center"}}>
+        <Box sx={{  display: "flex", flexDirection: "column", gap: 1, paddingX: "1%", paddingY: "1%",justifyContent:"center",alignItems:"center", position:"fixed",width:"100%" ,backgroundColor:"#FFF", zIndex:"1",boxShadow:"0px 4px 2px -2px rgba(0, 0, 0, 0.1)" }}>
             <Box sx={{ display: "flex", justifyContent: "space-between",alignItems:"center",borderColor:"black",borderBottom:1, paddingY: "0.5%", paddingX: "2%",width:"100%",maxWidth:"1000px"}}>
                 <Image src={logo} alt="SayFaya" style={{ height: "60px", width: "auto" }} />
                 <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>

@@ -12,7 +12,8 @@ function Elementor() {
       justifyContent: 'center', 
       alignItems: 'center', 
       paddingX: "2%", paddingY: "1%", 
-      textAlign: 'center' 
+      textAlign: 'center' ,
+      marginTop: { xs: 32, sm: 24 },
     }}
   >
     {/* BBB Logo */}
